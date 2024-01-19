@@ -28,9 +28,7 @@ if response.status_code==200:
     #titles
     h3_tags = soup.find_all('h3')
     for h3_tag in h3_tags:
-        # Find the <a> tag within the <h3> tag
         a_tag = h3_tag.find('a')
-        # Check if an <a> tag is found
         if a_tag:
             title = a_tag.get('title', a_tag.text)
             print("TITLE:", title)
